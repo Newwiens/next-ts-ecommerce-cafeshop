@@ -1,0 +1,254 @@
+{
+  "categories": [
+    { "id": "iced-coffee", "name": "Iced Coffee" },
+    { "id": "iced-tea", "name": "Fresh Iced Tea" },
+    { "id": "bubble-tea", "name": "Bubble Tea" }
+  ],
+
+  "products": [
+    {
+      "id": "icedcoffee-orgin",
+      "categoryId": "iced-coffee",
+      "name": "Iced Coffee Orginal",
+      "basePrice": 4,
+      "description": "Een traditionele ijskoffie op basis van espresso, gemengd met gecondenseerde melk voor een volle en romige smaak.",
+      "tags": [
+        "ijskoffie",
+        "icedcoffee",
+        "espresso",
+        "gecondenseerde melk",
+        "romig"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411352/png_Icedcoffee_orgin_zafqpa.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411275/icedcoffee-Orginal_vzdea4.jpg"
+      }
+    },
+    {
+      "id": "icedcoffee-bacxiu",
+      "categoryId": "iced-coffee",
+      "name": "Iced Coffee Bac Xiu",
+      "basePrice": 4,
+      "description": "Espresso van versgemalen bonen met verse melk en een zachte laag melkfoam.",
+      "tags": ["ijskoffie", "icedcoffee", "espresso", "latte", "romig"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411331/png_Icedcoffee_bacxiu_zzc0uh.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411269/icedcoffee-bacxiu_clsatf.jpg"
+      }
+    },
+    {
+      "id": "icedcoffee-americano",
+      "categoryId": "iced-coffee",
+      "name": "Iced Americano",
+      "basePrice": 4,
+      "description": "Americano koffie, gekoeld geserveerd met ijs voor een frisse, pure koffiesmaak.",
+      "tags": ["ijskoffie", "icedcoffee", "espresso", "fris"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411332/png_Icedcoffee_black_mjwiub.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411269/icedcoffee-americano_hn97ab.jpg"
+      }
+    },
+    {
+      "id": "icedcoffee-brownsugar",
+      "categoryId": "iced-coffee",
+      "name": "Iced Coffee Brown Sugar",
+      "basePrice": 4,
+      "description": "Espresso koffie, gemengd met zachte brown-sugar siroop voor een romige, karamelzoete afdronk.",
+      "tags": [
+        "ijskoffie",
+        "icedcoffee",
+        "espresso",
+        "latte",
+        "brown sugar",
+        "romig"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411321/png_Icedcoffee_brownsugar_surcx2.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411272/icedcoffee-brownsugar_srmsem.jpg"
+      }
+    },
+    {
+      "id": "icedcoffee-coconuts",
+      "categoryId": "iced-coffee",
+      "name": "Iced Coffee Coconuts",
+      "basePrice": 4,
+      "description": "Espresso met kokosmelk, met een toplaag van opgeklopte zoete foam.",
+      "tags": [
+        "ijskoffie",
+        "icedcoffee",
+        "espresso",
+        "latte",
+        "kokosnoot",
+        "romig"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764431830/png_Icedcoffee_coconut_knmvyb.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411272/icedcoffee-coconut_tjhnkr.jpg"
+      }
+    },
+    {
+      "id": "fresh-icedtea-lychee",
+      "categoryId": "iced-tea",
+      "name": "Fresh Iced Tea Lychee",
+      "basePrice": 4,
+      "description": "Iced tea gemaakt van groene thee, met lychee en een zachte, licht zoete lychee­smaak. Met een jelly-topping die perfect aansluit bij de smaak.",
+      "tags": ["ijsthee", "icedtea", "fruitig", "fris", "lychees"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411441/png_IcedTea_Lychee_ju4ho1.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411260/IcedTea_Lychee_qozs9d.jpg"
+      }
+    },
+    {
+      "id": "fresh-icedtea-mango",
+      "categoryId": "iced-tea",
+      "name": "Fresh Iced Tea Mango",
+      "basePrice": 4,
+      "description": "Iced tea gemaakt van groene thee, met mango en een frisse, tropische mangosmaak. Met een jelly-topping die perfect aansluit bij de smaak.",
+      "tags": ["ijsthee", "icedtea", "fruitig", "fris", "mango"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411446/png_IcedTea_Mango_xqstig.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411249/IcedTea_Mango_s3dgfv.jpg"
+      }
+    },
+    {
+      "id": "fresh-icedtea-oolong-lemon",
+      "categoryId": "iced-tea",
+      "name": "Fresh Iced Tea Oolong Lemon",
+      "basePrice": 4,
+      "description": "Iced tea gemaakt van echte oolongthee, met een frisse mintgeur en een citroensmaak. Met een jelly-topping die perfect aansluit bij de smaak.",
+      "tags": [
+        "ijsthee",
+        "icedtea",
+        "fruitig",
+        "fris",
+        "oolong",
+        "citroen",
+        "mint"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411382/png_OolongLemon_xqdhvj.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411239/IcedTea_OolongLemon_btmlo6.jpg"
+      }
+    },
+    {
+      "id": "fresh-icedtea-peach",
+      "categoryId": "iced-tea",
+      "name": "Fresh Iced Tea Peach",
+      "basePrice": 4,
+      "description": "Iced tea gemaakt van groene thee, met perzik en een zachte, fruitige perziksmaak. Met een jelly-topping die perfect aansluit bij de smaak.",
+      "tags": ["ijsthee", "icedtea", "fruitig", "fris", "perzik"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411372/png_IcedTea_Peach_p5dopx.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411234/IcedTea_Peach_ixnkd8.jpg"
+      }
+    },
+
+    {
+      "id": "fresh-icedtea-strawberry",
+      "categoryId": "iced-tea",
+      "name": "Fresh Iced Tea Strawberry",
+      "description": "Iced tea op basis van groene thee, met verse aardbei en een frisse, fruitige aardbeiensmaak. Met een jelly-topping die perfect aansluit bij de smaak.",
+      "basePrice": 4,
+      "tags": ["ijsthee", "icedtea", "fruitig", "fris", "aardbei"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411446/png_IcedTea_Strawberry_y58ei3.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411265/IcedTea_Strawberry_eyy5g6.jpg"
+      }
+    },
+    {
+      "id": "bubbletea-original",
+      "categoryId": "bubble-tea",
+      "name": "Bubble Tea Original",
+      "basePrice": 4.5,
+      "description": "Gemaakt van echte zwarte thee en verse melk voor een pure, volle smaak, met tapiocaparels. De originele klassieke bubble tea zoals hij bedoeld is.",
+      "tags": ["bubble tea", "boba", "latte", "tapioca", "romig"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411323/png_BubbleTea_orginal_d3d5sp.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411236/BubbleTea_orginal.jpg"
+      }
+    },
+    {
+      "id": "bubbletea-berrylatte",
+      "categoryId": "bubble-tea",
+      "name": "Bubble Tea Berry Latte",
+      "basePrice": 4.5,
+      "description": "Romige bubble tea van echte zwarte thee, gemixt met aardbei, frambozen en blauwe bessen, met verse melk en tapiocaparels",
+      "tags": [
+        "bubble tea",
+        "boba",
+        "latte",
+        "tapioca",
+        "romig",
+        "berry",
+        "fruitig"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411305/png_BubbleTea-BerryLatte_wgedml.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411268/BubbleTea_BerryLatte.jpg"
+      }
+    },
+    {
+      "id": "bubbletea-brownsugar",
+      "categoryId": "bubble-tea",
+      "name": "Bubble Tea Brown Sugar",
+      "basePrice": 4.5,
+      "description": "Echte zwarte thee gemengd met verse melk, met brown-sugar tapiocaparels, een gesmolten brown-sugar siroop en een laag melkfoam bovenop.",
+      "tags": [
+        "bubble tea",
+        "boba",
+        "latte",
+        "tapioca",
+        "romig",
+        "brown sugar"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411333/png_BubbleTea_brownsugar_nl1rp2.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411248/BubbleTea_brownsugar.jpg"
+      }
+    },
+    {
+      "id": "bubbletea-matcha",
+      "categoryId": "bubble-tea",
+      "name": "Bubble Tea Matcha",
+      "basePrice": 4.5,
+      "description": "Een romige bubble tea, gemaakt van echte zwarte thee en matchapoeder (fijn gemalen groene thee), gemengd met melk en geserveerd met tapiocaparels.",
+      "tags": ["bubble tea", "boba", "latte", "tapioca", "romig", "matcha"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411300/png_bubletea_matcha_jz7x9h.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411263/BubbleTea_Matcha.jpg"
+      }
+    },
+    {
+      "id": "bubbletea-strawberrylatte",
+      "categoryId": "bubble-tea",
+      "name": "Bubble Tea Strawberry Latte",
+      "basePrice": 4.5,
+      "description": "Gemaakt van echte zwarte thee, gemengd met verse melk tot een zoete, romige drank met de smaak van aardbeiensmoothie, verrijkt met zachte, taaie tapiocaparels.",
+      "tags": [
+        "bubble tea",
+        "boba",
+        "latte",
+        "tapioca",
+        "romig",
+        "aardbei",
+        "fruitig"
+      ],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411301/png_BubbleTea_StrawberryLatte_dream_yuyaka.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411258/BubbleTea_StrawberryLatte.jpg"
+      }
+    },
+    {
+      "id": "bubbletea-taro",
+      "categoryId": "bubble-tea",
+      "name": "Bubble Tea Taro",
+      "basePrice": 4.5,
+      "description": "Echte zwarte thee met verse melk, een romige tarosmaak en zachte, taaie tapiocaparels.",
+      "tags": ["bubble tea", "boba", "latte", "tapioca", "romig", "taro"],
+      "image": {
+        "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764432563/png_bubletea_taro_t9ocnx.png",
+        "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411265/BubbleTea_Taro.jpg"
+      }
+    }
+  ]
+}

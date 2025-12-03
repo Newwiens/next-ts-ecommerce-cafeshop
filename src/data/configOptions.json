@@ -1,0 +1,39 @@
+{
+  "sizes": [
+    { "id": "S", "label": "Klein", "priceExtra": 0 },
+    { "id": "M", "label": "Middel", "priceExtra": 1 },
+    { "id": "L", "label": "Groot", "priceExtra": 2 }
+  ],
+  "sugarLevels": [
+    { "id": "0", "label": "Zonder suiker" },
+    { "id": "50", "label": "Minder zoet" },
+    { "id": "75", "label": "Normaal zoet" },
+    { "id": "100", "label": "Extra zoet" }
+  ],
+  "iceLevels": [
+    { "id": "0", "label": "Geen ijs" },
+    { "id": "50", "label": "Weinig ijs" },
+    { "id": "75", "label": "Normaal ijs" },
+    { "id": "100", "label": "Extra ijs" }
+  ],
+  "coffeeLevels": [
+    { "id": "mild", "label": "Mild" },
+    { "id": "normal", "label": "Normaal sterk" },
+    { "id": "strong", "label": "Extra sterk" }
+  ],
+  "toppings": [
+    { "id": "tapioca", "label": "Tapioca parels" },
+    { "id": "brown-sugar-pearls", "label": "Brown sugar parels" },
+    { "id": "popping-mango", "label": "Mango popping boba" },
+    { "id": "popping-strawberry", "label": "Aardbei popping boba" },
+    { "id": "lychee-jelly", "label": "Lychee jelly" },
+    { "id": "fruit-jelly", "label": "Fruit jelly mix" },
+    { "id": "berry-jelly", "label": "Berry jelly" }
+  ],
+  "milkOptions": [
+    { "id": "regular-milk", "label": "Normale melk" },
+    { "id": "soy-milk", "label": "Sojamelk" },
+    { "id": "coconut-milk", "label": "Kokosmelk" },
+    { "id": "condensed-milk", "label": "Gecondenseerde melk" }
+  ]
+}
