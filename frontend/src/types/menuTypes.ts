@@ -10,6 +10,11 @@ export type DataCategoryId = {
   name: string;
 };
 
+export type ProductImage = {
+  product: string; //PNG
+  scene: string; //sfeerfoto
+};
+
 // 3) Product zonder Cloudinary
 export type DataProduct = {
   id: string;
@@ -18,6 +23,7 @@ export type DataProduct = {
   basePrice: number;
   description: string;
   tags: string[];
+  image: ProductImage;
 
   /*==== OVER NADENKEN OF DIT WELK PRAKTISCH OMDAT EXTRA TYPE  ProductWithImages  AANMAKEN????
   productImageUrl?: string; // ? = optioneel, dus niet verplicht property
