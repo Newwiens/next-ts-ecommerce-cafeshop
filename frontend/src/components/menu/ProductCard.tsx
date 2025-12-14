@@ -21,20 +21,23 @@ export default function ProductCard({ product }: Props) {
   return (
     <article className="grid gap-2">
       <h3>{product.name}</h3>
-
-      {/* Test: product PNG */}
-      {product.image?.scene ? (
+      {/* DEBUG */}
+      <pre className="text-xs text-black bg-white p-2 rounded">
+        {JSON.stringify(product, null, 2)}
+      </pre>
+      {src ? (
         <Image
           src={src}
           alt={product.name}
-          width={100}
-          height={100}
-          className="h-auto w-[200px]"
-          unoptimized
+          width={400}
+          height={300}
+          className="w-[200px] h-auto object-contain"
         />
       ) : (
-        <p>Geen scene image</p>
+        <p>Geen image (id: {product.id})</p>
       )}
+      <p>{product.description}</p>
+      <p>€{Number(product.basePrice).toFixed(2)}</p>
     </article>
   );
 }
