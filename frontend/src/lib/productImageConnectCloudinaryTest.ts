@@ -13,17 +13,15 @@ import {
 } from "@/lib/cloudinary";
 
 // Zoek juiste image-url bij een productId
-function findImageUrlForProduct(
-  productId: string,
-  images: CloudinaryImage[]
-): string | undefined {
-  // 1. exact match
-  const exact = images.find((img) => img.id === productId);
-  if (exact) return exact.url;
+const last = (id: string) => id.split("/").pop() ?? id;
 
-  // 2. prefix match (handig als je id bijv. "icedcoffee-americano_abc123" is)
-  const prefix = images.find((img) => img.id.startsWith(productId));
-  return prefix?.url;
+function findImageUrlForProduct(productId: string, images: CloudinaryImage[]) {
+  const hit =
+    images.find((img) => img.id === productId) ??
+    images.find((img) => last(img.id) === productId) ??
+    images.find((img) => last(img.id).startsWith(productId));
+
+  return hit?.url; // géén "" teruggeven
 }
 
 /**

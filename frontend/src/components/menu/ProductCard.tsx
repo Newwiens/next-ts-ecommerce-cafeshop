@@ -1,21 +1,36 @@
-import { DataProduct } from "@/types/menuTypes";
+import { ProductWithImages } from "@/types/menuTypes";
+import Image from "next/image";
 
-type Props = { product: DataProduct };
+type Props = { product: ProductWithImages };
 
 export default function ProductCard({ product }: Props) {
-  const scene = product.image?.scene;
+  const raw = product.sceneImageUrl ?? product.productImageUrl;
+
+  // trim + converteer "" naar null
+  const src = raw?.trim() ? raw.trim() : null;
+
+  if (!src) {
+    return (
+      <article className="grid gap-2">
+        <h3>{product.name}</h3>
+        <p>Geen image (id: {product.id})</p>
+      </article>
+    );
+  }
+
   return (
     <article className="grid gap-2">
       <h3>{product.name}</h3>
 
       {/* Test: product PNG */}
       {product.image?.scene ? (
-        <img
-          src={scene}
+        <Image
+          src={src}
           alt={product.name}
-          className="h-auto w-[100px]"
-          loading="lazy"
-          decoding="async"
+          width={100}
+          height={100}
+          className="h-auto w-[200px]"
+          unoptimized
         />
       ) : (
         <p>Geen scene image</p>

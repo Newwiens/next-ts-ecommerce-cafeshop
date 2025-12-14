@@ -1,21 +1,21 @@
 //ProductList
 
-import {
-  getMenuProducts,
-  getProductByCategory,
-  getMenuCategories,
-} from "@/lib/menuDataConnectJson";
-
+import { getMenuCategories } from "@/lib/menuDataConnectJson";
+import { getProductsWithImagesByCategory } from "@/lib/productImageConnectCloudinaryTest";
 import ProductCard from "@/components/menu/ProductCard";
-export default function ProductList() {
+
+export default async function ProductList() {
   const menuCategory = getMenuCategories();
 
   // Product sort by Categories
-  const allProducts = getMenuProducts();
-  const icedCoffee = getProductByCategory("iced-coffee");
-  const bubbleTea = getProductByCategory("bubble-tea");
-  const freshTea = getProductByCategory("iced-tea");
+  const [icedCoffee, bubbleTea, freshTea] = await Promise.all([
+    getProductsWithImagesByCategory("iced-coffee"),
+    getProductsWithImagesByCategory("bubble-tea"),
+    getProductsWithImagesByCategory("iced-tea"),
+  ]);
 
+  // tijdelijke "all products" door samen te voegen (kan je later netter maken)
+  const allProducts = [...icedCoffee, ...bubbleTea, ...freshTea];
   //Button by Categories
   const btnCoffeeCategory = menuCategory.find((c) => c.id === "iced-coffee");
   const btnBobaCategory = menuCategory.find((c) => c.id === "bubble-tea");
@@ -27,11 +27,11 @@ export default function ProductList() {
         <section
           id="all-list"
           data-category="all-list"
-          className="menu__category"
+          className="menu__category-section"
         >
           <h2>All products ({allProducts.length})</h2>
           <div>
-            <ul>
+            <ul className="menu__category-grid">
               {allProducts.map((p) => (
                 <li key={p.id}>
                   <ProductCard product={p} />
@@ -53,7 +53,7 @@ export default function ProductList() {
         >
           <h2>Ijs koffie ({icedCoffee.length})</h2>
           <div>
-            <ul>
+            <ul className="menu__category-grid">
               {icedCoffee.map((p) => (
                 <li key={p.id}>
                   <ProductCard product={p} />
@@ -75,7 +75,7 @@ export default function ProductList() {
         >
           <h2>Bubble Tea ({bubbleTea.length})</h2>
           <div>
-            <ul>
+            <ul className="menu__category-grid">
               {bubbleTea.map((p) => (
                 <li key={p.id}>
                   <ProductCard product={p} />
@@ -97,7 +97,7 @@ export default function ProductList() {
         >
           <h2>Fresh Tea ({freshTea.length})</h2>
           <div>
-            <ul>
+            <ul className="menu__category-grid">
               {freshTea.map((p) => (
                 <li key={p.id}>
                   <ProductCard product={p} />

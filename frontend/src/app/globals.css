@@ -9,6 +9,10 @@
 .menu__btn {
   @apply border-black border-[3px] w-full;
 }
-.menu__category {
+.menu__category-section {
   @apply border-white border-[3px] w-full;
+}
+
+.menu__category-grid {
+  @apply grid grid-cols-3;
 }

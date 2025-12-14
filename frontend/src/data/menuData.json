@@ -156,9 +156,9 @@
       }
     },
     {
-      "id": "bubbletea-original",
+      "id": "bubbletea-classic",
       "categoryId": "bubble-tea",
-      "name": "Bubble Tea Original",
+      "name": "Bubble Tea classic",
       "basePrice": 4.5,
       "description": "Gemaakt van echte zwarte thee en verse melk voor een pure, volle smaak, met tapiocaparels. De originele klassieke bubble tea zoals hij bedoeld is.",
       "tags": ["bubble tea", "boba", "latte", "tapioca", "romig"],
