@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+/* ==== MENU PAGINA ==== */
+.menu__all-list {
+  @apply grid gap-4 justify-items-stretch;
+  @apply grid-cols-[12rem_1fr];
+}
+
+.menu__btn {
+  @apply border-black border-[3px] w-full;
+}
+.menu__category {
+  @apply border-white border-[3px] w-full;
+}
