@@ -4,7 +4,8 @@ import Image from "next/image";
 type Props = { product: ProductWithImages };
 
 export default function ProductCard({ product }: Props) {
-  const raw = product.sceneImageUrl ?? product.productImageUrl;
+  //  product.sceneImageUrl ?? --> scene foto's
+  const raw = product.productImageUrl;
 
   // trim + converteer "" naar null
   const src = raw?.trim() ? raw.trim() : null;
