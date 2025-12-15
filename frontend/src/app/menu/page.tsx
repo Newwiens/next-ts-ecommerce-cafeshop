@@ -7,7 +7,7 @@ export default function MenuPage() {
         <h1 className="text-3xl font-bold mb-4">Menu</h1>
         <p>Hier komt straks alle iced coffee & bubble tea 🍹</p>
       </main>
-      <aside className="min-h-screen bg-amber-400">
+      <aside className="min-h-screen bg-white">
         <ProductList />
       </aside>
     </>
