@@ -21,10 +21,7 @@ export default function ProductCard({ product }: Props) {
   return (
     <article className="grid gap-2">
       <h3>{product.name}</h3>
-      /* {/* /* {/* DEBUG */}
-      <pre className="text-xs text-black bg-white p-2 rounded">
-        {JSON.stringify(product, null, 2)}
-      </pre> */ */} */
+      
       {src ? (
         <Image
           src={src}
