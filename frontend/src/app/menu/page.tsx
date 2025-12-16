@@ -1,5 +1,5 @@
 // src/app/menu/page.tsx
-import ProductList from "@/components/menu/TestProductList";
+import ProductList from "@/components/menu/ProductList";
 export default function MenuPage() {
   return (
     <>
