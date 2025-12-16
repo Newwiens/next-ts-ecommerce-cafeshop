@@ -18,7 +18,7 @@ export default async function ProductList() {
   const allProducts = [...icedCoffee, ...bubbleTea, ...freshTea];
   //Button by Categories
   const btnCoffeeCategory = menuCategory.find((c) => c.id === "iced-coffee");
-  const btnBobaCategory = menuCategory.find((c) => c.id === "bubble-tea");
+  const btnBubbleTeaCategory = menuCategory.find((c) => c.id === "bubble-tea");
   const btnTeaCategory = menuCategory.find((c) => c.id === "iced-tea");
   return (
     <>
@@ -64,13 +64,13 @@ export default async function ProductList() {
         </section>
 
         {/* Section Bubble Tea */}
-        {btnBobaCategory && (
-          <button className="menu__btn">{btnBobaCategory.name}</button>
+        {btnBubbleTeaCategory && (
+          <button className="menu__btn">{btnBubbleTeaCategory.name}</button>
         )}
 
         <section
-          id="iced-boba"
-          data-category="iced-boba"
+          id="bubble-tea"
+          data-category="bubble-tea"
           className="menu__category"
         >
           <h2>Bubble Tea ({bubbleTea.length})</h2>

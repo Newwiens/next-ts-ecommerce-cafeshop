@@ -1,0 +1,25 @@
+1. app/menu/page.tsx (Server)
+
+Puur “compositie”: zet je pagina in elkaar (header section, ProductList, cart banner). 
+Geen useState hier. 
+
+menuLayout
+
+2. ProductList.tsx (Server)
+
+- Haalt categories uit JSON (getMenuCategories())
+- Haalt per category de producten op (getProductsWithImagesByCategory(...))
+- Rendert alle categorie-sections met ProductCard (server layout)
+- Geeft tabs + sections door aan een kleine client component
+
+3. ProductListClient.tsx (Client)
+
+- Doet alleen: useState voor “active tab”
+- Toont links de 4 knoppen
+- Toont rechts alleen de juiste section (de rest verbergt hij)
+
+4. ProductCard.tsx (Server)
+
+Blijft “puur layout”. Later kun je voor details/options een aparte client component 
+gebruiken (bv. ProductOptionsSelector) zonder je card te vervuilen. 
+
