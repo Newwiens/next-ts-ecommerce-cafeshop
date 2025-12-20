@@ -49,7 +49,7 @@ export default function MenuTabsClient({ tabs, children }: Props) {
     - of childrenArr verandert (de parent geeft andere sections door)
    */
   return (
-    <div className="menu__tabs-list">
+    <div className="menu__tabs-list my-40">
       <nav className="grid h-60 gap-2 ">
         {tabs.map((t) => {
           const isActive = t.id === activeId;
@@ -58,7 +58,9 @@ export default function MenuTabsClient({ tabs, children }: Props) {
             <button
               key={t.id}
               type="button"
-              className={`menu__btn ${isActive ? "menu__btn--active" : ""}`}
+              className={`menu__btn cursor-pointer ${
+                isActive ? "menu__btn--active" : ""
+              }`}
               onClick={() => setActiveId(t.id)}
               aria-current={isActive ? "page" : undefined}
               aria-pressed={isActive}
@@ -69,7 +71,12 @@ export default function MenuTabsClient({ tabs, children }: Props) {
         })}
       </nav>
 
-      <div>{activeSection}</div>
+      <div className="flex flex-col">
+        <header className="bg-amber-500 flex justify-center">
+          <h1 className=" text-3xl font-bold">Menu</h1>
+        </header>
+        {activeSection}
+      </div>
     </div>
   );
 }

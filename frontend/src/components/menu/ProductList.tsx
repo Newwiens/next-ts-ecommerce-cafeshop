@@ -54,7 +54,7 @@ export default async function ProductList() {
         <div>
           <ul className="menu__category-grid">
             {allProducts.map((p) => (
-              <li key={p.id}>
+              <li key={p.id} className="menu__category-grid-li">
                 <ProductCard product={p} />
               </li>
             ))}
@@ -72,7 +72,7 @@ export default async function ProductList() {
         <div>
           <ul className="menu__category-grid">
             {icedCoffee.map((p) => (
-              <li key={p.id}>
+              <li key={p.id} className="menu__category-grid-li">
                 <ProductCard product={p} />
               </li>
             ))}
@@ -90,7 +90,7 @@ export default async function ProductList() {
         <div>
           <ul className="menu__category-grid">
             {bubbleTea.map((p) => (
-              <li key={p.id}>
+              <li key={p.id} className="menu__category-grid-li">
                 <ProductCard product={p} />
               </li>
             ))}
@@ -108,7 +108,7 @@ export default async function ProductList() {
         <div>
           <ul className="menu__category-grid">
             {freshTea.map((p) => (
-              <li key={p.id}>
+              <li key={p.id} className="menu__category-grid-li">
                 <ProductCard product={p} />
               </li>
             ))}

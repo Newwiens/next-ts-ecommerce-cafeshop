@@ -10,9 +10,19 @@
   @apply bg-amber-500 rounded-4xl w-full;
 }
 .menu__category-section {
-  @apply border-white border-[3px] w-full;
+  /* ruimte bovenin zodat “zwevende” beker niet tegen h2 komt */
+  @apply w-full border-white border-[3px] overflow-visible pt-10;
 }
 
 .menu__category-grid {
-  @apply grid grid-cols-3;
+  /* speling onder h2 + genoeg row-gap voor de zwevende beker */
+  @apply grid w-full justify-items-center;
+  @apply gap-x-8 gap-y-50;
+
+  /* responsive grid (beter dan hard grid-cols-3) */
+  @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.menu__category-grid-li {
+  @apply w-full min-w-0;
 }
