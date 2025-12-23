@@ -79,10 +79,10 @@ export default function MenuTabsClient({ tabs, children }: Props) {
                     alt={t.imgAlt ?? t.label}
                     width={200}
                     height={200}
-                    className="shrink-0"
+                    className="shrink-0 w-[100]"
                   ></Image>
                 ) : null}
-                <span className="text-left">{t.label}</span>
+                <span className="text-left w-full">{t.label}</span>
               </button>
             );
           })}
