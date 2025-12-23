@@ -92,12 +92,7 @@ export default async function ProductList() {
   return (
     <MenuTabsClient tabs={tabs}>
       {sections.map((s) => (
-        <section
-          key={s.id}
-          id={s.id}
-          data-category={s.id}
-          className={s.className}
-        >
+        <div key={s.id} id={s.id} data-category={s.id} className={s.className}>
           <h2>{s.title}</h2>
           <div>
             <ul className="menu__category-grid">
@@ -108,7 +103,7 @@ export default async function ProductList() {
               ))}
             </ul>
           </div>
-        </section>
+        </div>
       ))}
     </MenuTabsClient>
   );

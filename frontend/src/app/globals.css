@@ -7,7 +7,7 @@
 }
 
 .menu__btn {
-  @apply flex flex-row justify-center items-center bg-amber-500 rounded-4xl w-fit p-6;
+  @apply flex flex-row w-full items-center bg-amber-500 rounded-4xl p-6;
 }
 .menu__category-section {
   /* ruimte bovenin zodat “zwevende” beker niet tegen h2 komt */

@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body className="bg-slate-950 text-black">
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />

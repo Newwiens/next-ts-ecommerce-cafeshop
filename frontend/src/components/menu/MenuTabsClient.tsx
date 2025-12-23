@@ -57,7 +57,7 @@ export default function MenuTabsClient({ tabs, children }: Props) {
   return (
     <>
       <div className="menu__tabs-list my-20">
-        <nav className="grid h-60 gap-2 ">
+        <nav className="grid h-60 gap-2 w-64 justify-items-stretch">
           {tabs.map((t) => {
             const isActive = t.id === activeId;
             const imgSrc = t.imgSrc?.trim();
@@ -79,10 +79,10 @@ export default function MenuTabsClient({ tabs, children }: Props) {
                     alt={t.imgAlt ?? t.label}
                     width={200}
                     height={200}
-                    className="shrink-0 w-[100]"
+                    className="shrink-0 w-20 h-auto"
                   ></Image>
                 ) : null}
-                <span className="text-left w-full">{t.label}</span>
+                <span>{t.label}</span>
               </button>
             );
           })}
