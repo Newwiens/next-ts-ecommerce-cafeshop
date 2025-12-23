@@ -1,12 +1,18 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import Image from "next/image";
 
-type Tab = { id: string; label: string };
+export type Tab = Readonly<{
+  id: string;
+  label: string;
+  imgSrc?: string;
+  imgAlt?: string;
+}>;
 type SectionProps = { id?: string };
 
 type Props = {
-  tabs: Tab[];
+  tabs: ReadonlyArray<Tab>;
   children: React.ReactNode;
 };
 
@@ -49,34 +55,41 @@ export default function MenuTabsClient({ tabs, children }: Props) {
     - of childrenArr verandert (de parent geeft andere sections door)
    */
   return (
-    <div className="menu__tabs-list my-40">
-      <nav className="grid h-60 gap-2 ">
-        {tabs.map((t) => {
-          const isActive = t.id === activeId;
+    <>
+      <div className="menu__tabs-list my-20">
+        <nav className="grid h-60 gap-2 ">
+          {tabs.map((t) => {
+            const isActive = t.id === activeId;
+            const imgSrc = t.imgSrc?.trim();
 
-          return (
-            <button
-              key={t.id}
-              type="button"
-              className={`menu__btn cursor-pointer ${
-                isActive ? "menu__btn--active" : ""
-              }`}
-              onClick={() => setActiveId(t.id)}
-              aria-current={isActive ? "page" : undefined}
-              aria-pressed={isActive}
-            >
-              {t.label}
-            </button>
-          );
-        })}
-      </nav>
+            return (
+              <button
+                key={t.id}
+                type="button"
+                className={`menu__btn cursor-pointer ${
+                  isActive ? "menu__btn--active" : ""
+                }`}
+                onClick={() => setActiveId(t.id)}
+                aria-current={isActive ? "page" : undefined}
+                aria-pressed={isActive}
+              >
+                {imgSrc ? (
+                  <Image
+                    src={imgSrc}
+                    alt={t.imgAlt ?? t.label}
+                    width={200}
+                    height={200}
+                    className="shrink-0"
+                  ></Image>
+                ) : null}
+                <span className="text-left">{t.label}</span>
+              </button>
+            );
+          })}
+        </nav>
 
-      <div className="flex flex-col">
-        <header className="bg-amber-500 flex justify-center">
-          <h1 className=" text-3xl font-bold">Menu</h1>
-        </header>
-        {activeSection}
+        <div className="flex flex-col">{activeSection}</div>
       </div>
-    </div>
+    </>
   );
 }

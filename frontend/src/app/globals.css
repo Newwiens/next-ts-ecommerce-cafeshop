@@ -2,12 +2,12 @@
 
 /* ==== MENU PAGINA ==== */
 .menu__tabs-list {
-  @apply grid gap-4 justify-items-stretch h-fit;
-  @apply grid-cols-[12rem_1fr];
+  @apply grid gap-12 justify-items-stretch h-fit;
+  @apply grid-cols-[22rem_1fr];
 }
 
 .menu__btn {
-  @apply bg-amber-500 rounded-4xl w-full;
+  @apply flex flex-row justify-center items-center bg-amber-500 rounded-4xl w-full p-6;
 }
 .menu__category-section {
   /* ruimte bovenin zodat “zwevende” beker niet tegen h2 komt */

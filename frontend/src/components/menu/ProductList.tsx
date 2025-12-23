@@ -21,100 +21,95 @@ export default async function ProductList() {
   const tabCoffeeCategory = menuCategory.find((c) => c.id === "iced-coffee");
   const tabBubbleTeaCategory = menuCategory.find((c) => c.id === "bubble-tea");
   const tabFreshTeaCategory = menuCategory.find((c) => c.id === "iced-tea");
+
+  //Tabs
+  const tabs = [
+    {
+      id: "all-list",
+      label: `All (${allProducts.length})`,
+      imgSrc: "",
+      imgAlt: "All products",
+    },
+    {
+      id: "iced-coffee",
+      label: `${tabCoffeeCategory?.name ?? "Iced Coffee"} (${
+        icedCoffee.length
+      })`,
+      imgSrc: "/assets/banner/tab-icedcoffee.png",
+      imgAlt: "Iced Coffee",
+    },
+    {
+      id: "bubble-tea",
+      label: `${tabBubbleTeaCategory?.name ?? "Bubble Tea"} (${
+        bubbleTea.length
+      })`,
+      imgSrc: "/assets/banner/2tab-bubbletea.png",
+      imgAlt: "Bubble Tea",
+    },
+    {
+      id: "iced-tea",
+      label: `${tabFreshTeaCategory?.name ?? "Fresh Iced Tea"} (${
+        freshTea.length
+      })`,
+      imgSrc: "/assets/banner/tab-icedtea.png",
+      imgAlt: "Fresh Iced Tea",
+    },
+  ] as const;
+
+  //Sections
+  const sections = [
+    {
+      id: "all-list",
+      title: `All products (${allProducts.length})`,
+      product: allProducts,
+      className: "menu__category-section",
+    },
+    {
+      id: "iced-coffee",
+      title: `${tabCoffeeCategory?.name ?? "Iced Coffee"} (${
+        icedCoffee.length
+      })`,
+      product: icedCoffee,
+      className: "menu__category-section",
+    },
+    {
+      id: "bubble-tea",
+      title: `${tabBubbleTeaCategory?.name ?? "Iced Coffee"} (${
+        bubbleTea.length
+      })`,
+      product: bubbleTea,
+      className: "menu__category-section",
+    },
+    {
+      id: "iced-tea",
+      title: `${tabFreshTeaCategory?.name ?? "Iced Coffee"} (${
+        freshTea.length
+      })`,
+      product: freshTea,
+      className: "menu__category-section",
+    },
+  ];
   return (
-    <MenuTabsClient
-      tabs={[
-        { id: "all-list", label: `All (${allProducts.length})` },
-        {
-          id: "iced-coffee",
-          label: `${tabCoffeeCategory?.name ?? "Iced Coffee"} (${
-            icedCoffee.length
-          })`,
-        },
-        {
-          id: "bubble-tea",
-          label: `${tabBubbleTeaCategory?.name ?? "Bubble Tea"} (${
-            bubbleTea.length
-          })`,
-        },
-        {
-          id: "iced-tea",
-          label: `${tabFreshTeaCategory?.name ?? "Fresh Iced Tea"} (${
-            freshTea.length
-          })`,
-        },
-      ]}
-    >
-      <section
-        id="all-list"
-        data-category="all-list"
-        className="menu__category-section"
-      >
-        <h2>All products ({allProducts.length})</h2>
-        <div>
-          <ul className="menu__category-grid">
-            {allProducts.map((p) => (
-              <li key={p.id} className="menu__category-grid-li">
-                <ProductCard product={p} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Section Iced Coffee */}
-      <section
-        id="iced-coffee"
-        data-category="iced-coffee"
-        className="menu__category"
-      >
-        <h2>Ijs koffie ({icedCoffee.length})</h2>
-        <div>
-          <ul className="menu__category-grid">
-            {icedCoffee.map((p) => (
-              <li key={p.id} className="menu__category-grid-li">
-                <ProductCard product={p} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Section Bubble Tea */}
-      <section
-        id="bubble-tea"
-        data-category="bubble-tea"
-        className="menu__category"
-      >
-        <h2>Bubble Tea ({bubbleTea.length})</h2>
-        <div>
-          <ul className="menu__category-grid">
-            {bubbleTea.map((p) => (
-              <li key={p.id} className="menu__category-grid-li">
-                <ProductCard product={p} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Section Fresh Tea */}
-      <section
-        id="iced-tea"
-        data-category="iced-tea"
-        className="menu__category"
-      >
-        <h2>Fresh Tea ({freshTea.length})</h2>
-        <div>
-          <ul className="menu__category-grid">
-            {freshTea.map((p) => (
-              <li key={p.id} className="menu__category-grid-li">
-                <ProductCard product={p} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+    <MenuTabsClient tabs={tabs}>
+      {sections.map((s) => (
+        <section
+          key={s.id}
+          id={s.id}
+          data-category={s.id}
+          className={s.className}
+        >
+          <h2>{s.title}</h2>
+          <div>
+            <ul className="menu__category-grid">
+              {s.product.map((p) => (
+                <li key={p.id} className="menu__category-grid-li">
+                  <ProductCard product={p} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ))}
     </MenuTabsClient>
   );
 }
