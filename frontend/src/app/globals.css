@@ -3,7 +3,7 @@
 /* ==== MENU PAGINA ==== */
 .menu__tabs-list {
   @apply grid gap-12 justify-items-stretch h-fit;
-  @apply grid-cols-[22rem_1fr];
+  @apply grid-cols-[16rem_1fr];
 }
 
 .menu__btn {
@@ -17,12 +17,12 @@
 .menu__category-grid {
   /* speling onder h2 + genoeg row-gap voor de zwevende beker */
   @apply grid w-full justify-items-center;
-  @apply gap-x-8 gap-y-50;
+  @apply gap-x-8 gap-y-40;
 
   /* responsive grid (beter dan hard grid-cols-3) */
   @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
 }
 
 .menu__category-grid-li {
-  @apply w-full min-w-0;
+  @apply min-w-0;
 }
