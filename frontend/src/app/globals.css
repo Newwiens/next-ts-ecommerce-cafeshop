@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 /* ==== MENU PAGINA ==== */
-.menu__tabs-list {
-  @apply grid gap-12 justify-items-stretch h-fit;
-  @apply grid-cols-[16rem_1fr];
+.main__page-center {
+  @apply flex flex-row justify-center mx-auto w-full max-w-7xl min-h-screen bg-white;
 }
 
-.menu__btn {
-  @apply flex flex-row w-full items-center bg-amber-500 rounded-4xl p-6;
-}
+/* .menu__tabs-list {
+  @apply grid-cols-[1fr] grid gap-12 justify-items-stretch h-fit;
+  @apply grid-cols-[1fr];
+} */
+
 .menu__category-section {
   /* ruimte bovenin zodat “zwevende” beker niet tegen h2 komt */
   @apply w-full border-white border-[3px] overflow-visible pt-10;

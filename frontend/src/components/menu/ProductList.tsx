@@ -27,7 +27,7 @@ export default async function ProductList() {
     {
       id: "all-list",
       label: `All (${allProducts.length})`,
-      imgSrc: "",
+      imgSrc: "/assets/banner/tab-all3.png",
       imgAlt: "All products",
     },
     {
