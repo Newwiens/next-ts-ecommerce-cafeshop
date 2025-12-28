@@ -6,7 +6,7 @@
   ],
   "sugarLevels": [
     { "id": "0", "label": "Zonder suiker" },
-    { "id": "50", "label": "Minder zoet" },
+    { "id": "50", "label": "weinig zoet" },
     { "id": "75", "label": "Normaal zoet" },
     { "id": "100", "label": "Extra zoet" }
   ],

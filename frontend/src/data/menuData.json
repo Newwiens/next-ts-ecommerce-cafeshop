@@ -12,13 +12,7 @@
       "name": "Iced Coffee Orginal",
       "basePrice": 4,
       "description": "Een traditionele ijskoffie op basis van espresso, gemengd met gecondenseerde melk voor een volle en romige smaak.",
-      "tags": [
-        "ijskoffie",
-        "icedcoffee",
-        "espresso",
-        "gecondenseerde melk",
-        "romig"
-      ],
+      "tags": ["Ijs", "Espresso", "Melk"],
       "image": {
         "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411352/png_Icedcoffee_orgin_zafqpa.png",
         "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411275/icedcoffee-Orginal_vzdea4.jpg"
@@ -30,7 +24,7 @@
       "name": "Iced Coffee Bac Xiu",
       "basePrice": 4,
       "description": "Espresso van versgemalen bonen met verse melk en een zachte laag melkfoam.",
-      "tags": ["ijskoffie", "icedcoffee", "espresso", "latte", "romig"],
+      "tags": ["Ijs", "Espresso", "Melk", "Romig"],
       "image": {
         "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411331/png_Icedcoffee_bacxiu_zzc0uh.png",
         "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411269/icedcoffee-bacxiu_clsatf.jpg"
@@ -42,7 +36,7 @@
       "name": "Iced Americano",
       "basePrice": 4,
       "description": "Americano koffie, gekoeld geserveerd met ijs voor een frisse, pure koffiesmaak.",
-      "tags": ["ijskoffie", "icedcoffee", "espresso", "fris"],
+      "tags": ["Ijs", "Koffie", "Melk", "Fris"],
       "image": {
         "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411332/png_Icedcoffee_black_mjwiub.png",
         "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411269/icedcoffee-americano_hn97ab.jpg"
@@ -54,14 +48,7 @@
       "name": "Iced Coffee Brown Sugar",
       "basePrice": 4,
       "description": "Espresso koffie, gemengd met zachte brown-sugar siroop voor een romige, karamelzoete afdronk.",
-      "tags": [
-        "ijskoffie",
-        "icedcoffee",
-        "espresso",
-        "latte",
-        "brown sugar",
-        "romig"
-      ],
+      "tags": ["Ijs", "Espresso", "Melk", "Bruine suiker", "Romig"],
       "image": {
         "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411321/png_Icedcoffee_brownsugar_surcx2.png",
         "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411272/icedcoffee-brownsugar_srmsem.jpg"
@@ -73,14 +60,7 @@
       "name": "Iced Coffee Coconuts",
       "basePrice": 4,
       "description": "Espresso met kokosmelk, met een toplaag van opgeklopte zoete foam.",
-      "tags": [
-        "ijskoffie",
-        "icedcoffee",
-        "espresso",
-        "latte",
-        "kokosnoot",
-        "romig"
-      ],
+      "tags": ["Ijs", "Espresso", "Melk", "Kokosnoot", "Romig"],
       "image": {
         "product": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764431830/png_Icedcoffee_coconut_knmvyb.png",
         "scene": "https://res.cloudinary.com/dbe8c8gub/image/upload/v1764411272/icedcoffee-coconut_tjhnkr.jpg"

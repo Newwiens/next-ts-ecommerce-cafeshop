@@ -5,25 +5,17 @@
   @apply flex flex-row justify-center mx-auto w-full max-w-7xl min-h-screen bg-white;
 }
 
-/* .menu__tabs-list {
-  @apply grid-cols-[1fr] grid gap-12 justify-items-stretch h-fit;
-  @apply grid-cols-[1fr];
-} */
-
 .menu__category-section {
   /* ruimte bovenin zodat “zwevende” beker niet tegen h2 komt */
   @apply w-full border-white border-[3px] overflow-visible pt-10;
 }
 
 .menu__category-grid {
-  /* speling onder h2 + genoeg row-gap voor de zwevende beker */
-  @apply grid w-full justify-items-center;
-  @apply gap-x-8 gap-y-40;
-
-  /* responsive grid (beter dan hard grid-cols-3) */
-  @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  @apply grid gap-6 w-full;
+  @apply grid-cols-1 sm:grid-cols-1 lg:grid-cols-1;
+  @apply items-stretch auto-rows-fr;
 }
 
 .menu__category-grid-li {
-  @apply min-w-0;
+  @apply w-full min-w-0 h-full;
 }

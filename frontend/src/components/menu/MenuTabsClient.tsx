@@ -104,9 +104,9 @@ export default function MenuTabsClient({ tabs, children }: Props) {
                     ) : null}
                   </div>
 
-                  <span className="text-medium font- text-center leading-tight">
+                  <p className="text-medium font- text-center leading-tight">
                     {t.label}
-                  </span>
+                  </p>
                 </button>
               );
             })}
