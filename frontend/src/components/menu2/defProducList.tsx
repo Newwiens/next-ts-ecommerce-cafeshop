@@ -1,31 +1,29 @@
-// ProductList.tsx (server component)
+//ProductListl
 
 import { getMenuCategories } from "@/lib/menuDataConnectJson";
 import { getProductsWithImagesByCategory } from "@/lib/productImageConnectCloudinaryTest";
-
-// Nieuwe structuur: centrale shell
-import MenuShell, { type MenuSection } from "@/components/menu/MenuShell";
-import type { Tab } from "@/types/menuTypes";
+import ProductCard from "@/components/menu2/DefProductCard";
+import MenuTabsClient from "@/components/menu2/MenuTabsClient";
 
 export default async function ProductList() {
   const menuCategory = getMenuCategories();
 
-  // Product sort by categories
+  // Product sort by Categories
   const [icedCoffee, bubbleTea, freshTea] = await Promise.all([
     getProductsWithImagesByCategory("iced-coffee"),
     getProductsWithImagesByCategory("bubble-tea"),
     getProductsWithImagesByCategory("iced-tea"),
   ]);
 
+  // tijdelijke "all products" door samen te voegen (kan je later netter maken)
   const allProducts = [...icedCoffee, ...bubbleTea, ...freshTea];
-
-  // labels uit je menu categories
+  //Button by Categories
   const tabCoffeeCategory = menuCategory.find((c) => c.id === "iced-coffee");
   const tabBubbleTeaCategory = menuCategory.find((c) => c.id === "bubble-tea");
   const tabFreshTeaCategory = menuCategory.find((c) => c.id === "iced-tea");
 
-  // Tabs (boven menu)
-  const tabs: Tab[] = [
+  //Tabs
+  const tabs = [
     {
       id: "all-list",
       label: `All (${allProducts.length})`,
@@ -56,37 +54,57 @@ export default async function ProductList() {
       imgSrc: "/assets/banner/tab-icedtea.png",
       imgAlt: "Fresh Iced Tea",
     },
-  ];
+  ] as const;
 
-  // Sections (data per category)
-  const sections: MenuSection[] = [
+  //Sections
+  const sections = [
     {
       id: "all-list",
       title: `All products (${allProducts.length})`,
-      products: allProducts,
+      product: allProducts,
+      className: "menu__category-section",
     },
     {
       id: "iced-coffee",
       title: `${tabCoffeeCategory?.name ?? "Iced Coffee"} (${
         icedCoffee.length
       })`,
-      products: icedCoffee,
+      product: icedCoffee,
+      className: "menu__category-section",
     },
     {
       id: "bubble-tea",
-      title: `${tabBubbleTeaCategory?.name ?? "Bubble Tea"} (${
+      title: `${tabBubbleTeaCategory?.name ?? "Iced Coffee"} (${
         bubbleTea.length
       })`,
-      products: bubbleTea,
+      product: bubbleTea,
+      className: "menu__category-section",
     },
     {
       id: "iced-tea",
-      title: `${tabFreshTeaCategory?.name ?? "Fresh Iced Tea"} (${
+      title: `${tabFreshTeaCategory?.name ?? "Iced Coffee"} (${
         freshTea.length
       })`,
-      products: freshTea,
+      product: freshTea,
+      className: "menu__category-section",
     },
   ];
-
-  return <MenuShell tabs={tabs} sections={sections} />;
+  return (
+    <MenuTabsClient tabs={tabs}>
+      {sections.map((s) => (
+        <div key={s.id} id={s.id} data-category={s.id} className={s.className}>
+          <h2>{s.title}</h2>
+          <div>
+            <ul className="menu__category-grid">
+              {s.product.map((p) => (
+                <li key={p.id} className="menu__category-grid-li">
+                  <ProductCard product={p} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </MenuTabsClient>
+  );
 }

@@ -119,22 +119,21 @@ export default function ProductCard({ product }: Props) {
 
   return (
     <article className="w-full min-w-0 rounded-3xl bg-white shadow-sm ring-1 ring-black/5 overflow-hidden">
-      <div className="grid md:grid-cols-[260px_1fr]">
-        {/* Left image block */}
-        <div className="relative bg-linear-to-br from-amber-100 to-amber-200 p-4">
-          <div className="relative aspect-4/3 w-full rounded-2xl bg-white/40 overflow-hidden">
-            {src ? (
-              <Image
-                src={src}
-                alt={product.name}
-                fill
-                className="object-contain p-2"
-              />
-            ) : null}
-          </div>
+      {/* Left image block */}
+      <div className="relative bg-linear-to-br from-amber-100 to-amber-200 p-4">
+        <div className="relative aspect-4/3 w-full rounded-2xl bg-white/40 overflow-hidden">
+          {src ? (
+            <Image
+              src={src}
+              alt={product.name}
+              fill
+              className="object-contain p-2"
+            />
+          ) : null}
         </div>
+      </div>
 
-        {/* Right content */}
+      <div className="grid md:grid-cols-[260px_1fr]">
         <div className="p-5 md:p-6 grid gap-4">
           <div className="grid gap-1">
             <p className="text-[11px] opacity-60">Code #{product.id}</p>

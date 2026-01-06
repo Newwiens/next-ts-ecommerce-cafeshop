@@ -1,8 +1,20 @@
 // src/types/menuTypes.ts
 
+/* ============== TYPES FOR PROPS =========*/
+export type Tab = Readonly<{
+  id: MenuViewId;
+  label: string;
+  imgSrc?: string;
+  imgAlt?: string;
+}>;
+
 /* ============== TYPES FOR MENU ==========*/
 // 1) Category-id check
-type CheckCategoryId = "iced-coffee" | "iced-tea" | "bubble-tea";
+export type CheckCategoryId = "iced-coffee" | "iced-tea" | "bubble-tea";
+
+// Voor tabs/sections views
+export type MenuCatId = "iced-coffee" | "iced-tea" | "bubble-tea";
+export type MenuViewId = "all-list" | MenuCatId;
 
 // 2) Category object
 export type DataCategoryId = {
@@ -47,7 +59,7 @@ export type ProductWithImages = DataProduct & {
 /* ============== TYPES FOR SELECTION OPTIONS BY MENU ==========*/
 export type SizeOption = {
   id: string;
-  lable: string;
+  label: string;
   priceExtra: number;
 };
 

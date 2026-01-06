@@ -12,10 +12,10 @@
 
 .menu__category-grid {
   @apply grid gap-6 w-full;
-  @apply grid-cols-1 sm:grid-cols-1 lg:grid-cols-1;
+  @apply grid-cols-1 sm:grid-cols-1 lg:grid-cols-2;
   @apply items-stretch auto-rows-fr;
 }
 
 .menu__category-grid-li {
-  @apply w-full min-w-0 h-full;
+  @apply w-full min-w-0 h-full grid grid-cols-2 bg-amber-500;
 }
