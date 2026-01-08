@@ -1,8 +1,8 @@
 {
   "sizes": [
-    { "id": "S", "label": "Klein", "priceExtra": 0 },
-    { "id": "M", "label": "Middel", "priceExtra": 1 },
-    { "id": "L", "label": "Groot", "priceExtra": 2 }
+    { "id": "S", "label": "S", "priceExtra": 0 },
+    { "id": "M", "label": "M", "priceExtra": 1 },
+    { "id": "L", "label": "L", "priceExtra": 2 }
   ],
   "sugarLevels": [
     { "id": "0", "label": "Zonder suiker" },
@@ -30,7 +30,7 @@
     { "id": "fruit-jelly", "label": "Fruit jelly mix" },
     { "id": "berry-jelly", "label": "Berry jelly" }
   ],
-  "milkOptions": [
+  "milk": [
     { "id": "regular-milk", "label": "Normale melk" },
     { "id": "soy-milk", "label": "Sojamelk" },
     { "id": "coconut-milk", "label": "Kokosmelk" },

@@ -77,22 +77,30 @@ export default function MenuShell({ tabs, sections }: Props) {
         collapsed={tabCollapsed}
       />
 
-      <section className="my-8 mx-auto w-full max-w-7xl px-4 lg:px-6 mt-6">
-        <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)_320px] items-start">
-          <MenuLeft
-            title={activeSection?.title ?? "Menu"}
-            products={activeProducts}
-            selectedId={selectedProductId}
-            onSelect={setSelectedProductId}
-          />
-
-          {/* CENTER placeholder (Stap 3) */}
-          <div className="min-h-[520px] rounded-[28px] bg-neutral-200 grid place-items-center font-bold">
-            <MenuProductDetails product={selectedProduct} />
+      <section className="my-4 rounded-[28px] overflow-visible shadow-xl backdrop-blur z-20 mx-auto w-full max-w-7xl">
+        <div className="h-full grid lg:grid-cols-[200px_minmax(0,1fr)_300px] items-stretch">
+          {/* LEFT */}
+          <div className="bg-green-400 lg:self-stretch overflow-hidden rounded-l-[28px]">
+            <MenuLeft
+              title={activeSection?.title ?? "Menu"}
+              products={activeProducts}
+              selectedId={selectedProductId}
+              onSelect={setSelectedProductId}
+            />
           </div>
 
-          {/* RIGHT (vervang later met jouw ProductCart) */}
-          <MenuCart />
+          {/* CENTER */}
+          <div className="sticky top-20 self-start py-4">
+            <MenuProductDetails
+              key={selectedProduct?.id ?? "no-product"}
+              product={selectedProduct}
+            />
+          </div>
+
+          {/* RIGHT */}
+          <div className="sticky top-20 self-start overflow-visible rounded-l-[28px]">
+            <MenuCart />
+          </div>
         </div>
       </section>
     </div>

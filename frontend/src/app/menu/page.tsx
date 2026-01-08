@@ -1,4 +1,4 @@
-import ProductList from "@/components/menu/ProductList";
+import ProductList from "@/components/productMenu/ProductList";
 
 export default function MenuPage() {
   return (

@@ -4,7 +4,9 @@ import { getMenuCategories } from "@/lib/menuDataConnectJson";
 import { getProductsWithImagesByCategory } from "@/lib/productImageConnectCloudinaryTest";
 
 // Nieuwe structuur: centrale shell
-import MenuShell, { type MenuSection } from "@/components/menu/MenuShell";
+import MenuShell, {
+  type MenuSection,
+} from "@/components/productMenu/MenuShell";
 import type { Tab } from "@/types/menuTypes";
 
 export default async function ProductList() {

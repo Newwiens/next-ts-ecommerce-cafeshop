@@ -15,7 +15,7 @@ export default function MenuTopNav({
   collapsed,
 }: Props) {
   return (
-    <div className="sticky top-0 z-30 bg-amber-50 px-4 py-6">
+    <div className="sticky top-0 z-30 bg-amber-50 py-4">
       <nav className="mx-auto w-full max-w-7xl grid grid-flow-col auto-cols-max justify-center gap-4">
         {tabs.map((t) => {
           const isActive = t.id === activeId;
@@ -27,7 +27,7 @@ export default function MenuTopNav({
               type="button"
               onClick={() => onChange(t.id)}
               className={[
-                "flex flex-col w-[200px] items-center gap-3 p-4 rounded-[28px] cursor-pointer bg-amber-300",
+                "flex flex-col w-[150px] items-center p-2 rounded-[28px] cursor-pointer bg-amber-300",
                 "hover:bg-neutral-50",
                 isActive ? "bg-orange-400" : "",
               ].join(" ")}
@@ -36,8 +36,8 @@ export default function MenuTopNav({
             >
               <div
                 className={[
-                  "transition-all duration-300 overflow-hidden",
-                  collapsed ? "h-0 opacity-0 -mb-1" : "h-[100px] opacity-100",
+                  "overflow-hidden transition-[height,opacity] duration-300 will-change-[height,opacity]",
+                  collapsed ? "h-0 opacity-0" : "h-[100px] opacity-100",
                 ].join(" ")}
               >
                 {imgSrc ? (
@@ -46,7 +46,7 @@ export default function MenuTopNav({
                     alt={t.imgAlt ?? t.label}
                     width={200}
                     height={200}
-                    className="w-[98px] h-auto"
+                    className="w-20 h-auto"
                   />
                 ) : null}
               </div>
