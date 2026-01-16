@@ -74,5 +74,5 @@ export type ConfigOptions = {
   iceLevels: GlobalOptions[];
   coffeeLevels: GlobalOptions[];
   toppings: GlobalOptions[];
-  milk: GlobalOptions[];
+  milkLevels: GlobalOptions[];
 };

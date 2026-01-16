@@ -1,20 +1,24 @@
 "use client";
 
-import type { SizeOption, ConfigOptions } from "@/types/menuTypes";
+import type { SizeOption } from "@/types/menuTypes";
 
 type Props = {
-  sizes: SizeOption[];
+  sizesOpt: SizeOption[];
   value: SizeOption["id"];
   onChange: (id: SizeOption["id"]) => void;
 };
 
-export default function MenuOptions({ sizes, value, onChange }: Props) {
+export default function SizeOptionSelector({
+  sizesOpt,
+  value,
+  onChange,
+}: Props) {
   return (
     <div>
-      <div className="grid place-items-center gap-8">
+      <div>
         {/* SIZE options */}
         <div className="flex flex-row gap-2">
-          {sizes.map((s) => {
+          {sizesOpt.map((s) => {
             const activeSizes = s.id === value;
 
             return (
@@ -30,19 +34,14 @@ export default function MenuOptions({ sizes, value, onChange }: Props) {
                 ].join(" ")}
               >
                 {s.label}
-                <p>{s.priceExtra ? ` (+€${s.priceExtra} )` : ""}</p>
+                {(s.priceExtra ?? 0) > 0 && (
+                  <span className="ml-2 text-xs opacity-90">
+                    +€{s.priceExtra}
+                  </span>
+                )}
               </button>
             );
           })}
-        </div>
-
-        {/* Bestel BTN */}
-        <div>
-          <button className="cursor-pointer flex justify-center items-center bg-amber-500 rounded-full w-12 h-12">
-            <span className="relative text-white text-4xl leading-none -top-1">
-              +
-            </span>
-          </button>
         </div>
       </div>
     </div>

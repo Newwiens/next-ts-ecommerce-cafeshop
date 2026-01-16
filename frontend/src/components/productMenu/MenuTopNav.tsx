@@ -40,7 +40,7 @@ export default function MenuTopNav({
                   collapsed ? "h-0 opacity-0" : "h-[100px] opacity-100",
                 ].join(" ")}
               >
-                {imgSrc ? (
+                {imgSrc && (
                   <Image
                     src={imgSrc}
                     alt={t.imgAlt ?? t.label}
@@ -48,7 +48,7 @@ export default function MenuTopNav({
                     height={200}
                     className="w-20 h-auto"
                   />
-                ) : null}
+                )}
               </div>
               <p className="text-sm font-semibold text-center leading-tight">
                 {t.label}

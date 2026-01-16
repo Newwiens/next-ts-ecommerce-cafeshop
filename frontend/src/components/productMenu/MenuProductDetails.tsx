@@ -5,10 +5,11 @@ import type {
   ProductWithImages,
   SizeOption,
   ConfigOptions,
+  GlobalOptions,
 } from "@/types/menuTypes";
 import configOptionsJson from "@/data/configOptions.json";
-import MenuOptions from "./MenuOptions";
 import { useMemo, useState } from "react";
+import OptionsPanel from "./options/OptionsPanel";
 
 const OPTIONS = configOptionsJson as ConfigOptions;
 
@@ -17,19 +18,46 @@ export default function MenuProductDetails({
 }: {
   product: ProductWithImages | null;
 }) {
+  /* ========== State ========== */
   // Config voor SIZE selectie
-  const sizes = OPTIONS.sizes;
+  const sizeSelect = OPTIONS.sizes;
+  const iceSelect = OPTIONS.iceLevels;
+  const sugarSelect = OPTIONS.sugarLevels;
+  const coffeeSelect = OPTIONS.coffeeLevels;
+  const milkSelect = OPTIONS.milkLevels;
 
-  const [sizesId, setSizesId] = useState<SizeOption["id"]>(sizes[0]?.id ?? "S");
+  // State voor options + Eerst selectie
+  const [sizesId, setSizesId] = useState<SizeOption["id"]>(
+    sizeSelect[0]?.id ?? "S"
+  );
+  const [icesId, setIcesId] = useState<GlobalOptions["id"]>(
+    iceSelect.find((firstSelect) => firstSelect.id === "50")?.id ??
+      iceSelect[0]?.id ??
+      "50"
+  );
 
-  // reset size bij selectie switch
-  // useEffect(() => {
-  //   setSizesId(sizes[0]?.id ?? "S");
-  // }, [product?.id, sizes]);
+  const [sugarId, setSugarId] = useState<GlobalOptions["id"]>(
+    sugarSelect.find((firstSelect) => firstSelect.id === "50")?.id ??
+      sugarSelect[0]?.id ??
+      "50"
+  );
 
+  const [coffeeId, setCoffeeId] = useState<GlobalOptions["id"]>(
+    coffeeSelect.find((firstSelect) => firstSelect.id === "normal")?.id ??
+      coffeeSelect[0]?.id ??
+      "normal"
+  );
+
+  const [milkId, setMilkId] = useState<GlobalOptions["id"]>(
+    milkSelect.find((firstSelect) => firstSelect.id === "1")?.id ??
+      milkSelect[0]?.id ??
+      "Normaal"
+  );
+
+  /* ========== UseMemo ========== */
   const selectedSize = useMemo(() => {
-    return sizes.find((s) => s.id === sizesId) ?? sizes[0];
-  }, [sizes, sizesId]);
+    return sizeSelect.find((s) => s.id === sizesId) ?? sizeSelect[0];
+  }, [sizeSelect, sizesId]);
 
   const calPrice = useMemo(() => {
     if (!product) return 0;
@@ -60,7 +88,7 @@ export default function MenuProductDetails({
 
           {/* Tags */}
           <div>
-            {product.tags?.length ? (
+            {product.tags?.length && (
               <ul className="flex justify-center flex-wrap flex-row gap-2">
                 {product.tags.map((tag) => (
                   <li
@@ -71,7 +99,7 @@ export default function MenuProductDetails({
                   </li>
                 ))}
               </ul>
-            ) : null}
+            )}
           </div>
 
           {/* Product info */}
@@ -93,7 +121,35 @@ export default function MenuProductDetails({
       {/* Options blok */}
       <div className="self-start bg-amber-200 p-4 rounded-2xl">
         <div>
-          <MenuOptions sizes={sizes} value={sizesId} onChange={setSizesId} />
+          {product && (
+            <OptionsPanel
+              categoryId={product.categoryId}
+              sizes={sizeSelect}
+              sizesId={sizesId}
+              onSizeChange={setSizesId}
+              ices={iceSelect}
+              icesId={icesId}
+              onIceChange={setIcesId}
+              sugar={sugarSelect}
+              sugarId={sugarId}
+              onSugarChange={setSugarId}
+              coffee={coffeeSelect}
+              coffeeId={coffeeId}
+              onCoffeeChange={setCoffeeId}
+              milk={milkSelect}
+              milkId={milkId}
+              onMilkChange={setMilkId}
+            />
+          )}
+        </div>
+
+        {/* Bestel BTN */}
+        <div>
+          <button className="cursor-pointer flex justify-center items-center bg-amber-500 rounded-full w-12 h-12">
+            <span className="relative text-white text-4xl leading-none -top-1">
+              +
+            </span>
+          </button>
         </div>
       </div>
     </section>
